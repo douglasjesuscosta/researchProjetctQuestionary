@@ -1,0 +1,92 @@
+<html>
+<head>
+</head>
+
+<body>
+	<!-- Progress Tracker v2 -->
+	<ol class="progress" data-steps="6">
+	    <li class="done">
+	        <span class="name">Pergunta 1</span>
+	        <span class="step"><span>1</span></span>
+	    </li>
+	    <li class="active">
+	        <span class="name">Pergunta 2</span>
+	        <span class="step"><span>2</span></span>
+	    </li>
+	    <li>
+	        <span class="name">Pergunta 3</span>
+	        <span class="step"><span>3</span></span>
+	    </li>
+	    <li>
+	        <span class="name">Pergunta 4</span>
+	        <span class="step"><span>4</span></span>
+	    </li>
+	    <li>
+	        <span class="name">Pergunta 5</span>
+	        <span class="step"><span>5</span></span>
+	    </li>
+	    <li>
+	        <span class="name">Pergunta 6</span>
+	        <span class="step"><span>6</span></span>
+	    </li>
+	</ol>
+
+	<table>
+		<tr height="100%" >
+			<td class="col-md-2">
+				<img id="imagem" src="" width="750" height="450"/>
+				
+			</td>	
+			<td style="text-align:center;"  class="col-md-2" id="col-text">
+				<table id="table-text" class="tableStyle shape shape2">
+					<tr>
+						<td>
+							<div style="float: top;" align="center" >
+ 				 				<h3 id="texto">Selecione uma das opções abaixo:</h3>
+ 							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div style="float: center;" align="center" >
+ 				 				<h4 id="desc"></h4>
+ 				 			</div>
+						</td>
+					</tr>
+				
+				</table>
+ 				 
+ 				 
+			</td>
+		</tr>
+	</table>
+	
+	
+	<h3 class="likert-header">Qual dessas interfaces mais te agrada?</h3>
+	<form action="" wicket:id="form" id="form" method="post">
+		<wicket:container wicket:id="group">
+		
+				<ul class='likert'>
+				
+					<li><input type="radio" wicket:id="frt_ludico" name="likert" value="frt_ludico"  onClick="CB(this.id);"id="frt_ludico"><label>Muitos elementos visuais</label></li>
+					
+					<li><input type="radio" wicket:id="frc_ludico" name="likert" value="frc_ludico"onClick="CB(this.id);" id="frc_ludico"> <label>Moderados elementos visuais</label></li>
+					
+					<li><input type="radio" wicket:id="neutro" name="likert" value="neutro" onClick="CB(this.id);" id="neutro"> <label>Neutro</label></li>
+					
+					<li><input type="radio" wicket:id="frc_textual" name="likert" value="frc_textual" onClick="CB(this.id);" id="frc_textual"><label>Moderados elementos textuais</label></li>
+					
+					<li><input type="radio" wicket:id="frt_textual" name="likert" value="frt_textual" onClick="CB(this.id);" id="frt_textual"><label>Predominância textual</label></li>
+				
+				</ul> 		
+					
+		</wicket:container>
+		<CENTER>
+			<input class="btn btn-primary" type="submit" name="Próximo" value="Próximo" />
+		</CENTER>
+		
+	</form>
+</body>
+</html>
+
+

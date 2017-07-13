@@ -1,0 +1,92 @@
+<html>
+<head>
+</head>
+
+<body>
+	<!-- Progress Tracker v2 -->
+	<ol class="progress" data-steps="6">
+	    <li class="done">
+	        <span class="name">Pergunta 1</span>
+	        <span class="step"><span>1</span></span>
+	    </li>
+	    <li class="done">
+	        <span class="name">Pergunta 2</span>
+	        <span class="step"><span>2</span></span>
+	    </li>
+	    <li class="active">
+	        <span class="name">Pergunta 3</span>
+	        <span class="step"><span>3</span></span>
+	    </li>
+	    <li >
+	        <span class="name">Pergunta 4</span>
+	        <span class="step"><span>4</span></span>
+	    </li>
+	    <li>
+	        <span class="name">Pergunta 5</span>
+	        <span class="step"><span>5</span></span>
+	    </li>
+	    <li>
+	        <span class="name">Pergunta 6</span>
+	        <span class="step"><span>6</span></span>
+	    </li>
+	</ol>
+
+	<table>
+		<tr height="100%" >
+			<td class="col-md-2">
+				<img id="imagem" src="" width="750" height="450"/>
+				
+			</td>	
+			<td style="text-align:center;"  class="col-md-2" id="col-text">
+				<table id="table-text" class="tableStyle shape shape2">
+					<tr>
+						<td>
+							<div style="float: top;" align="center" >
+ 				 				<h3 id="texto">Selecione uma das opções abaixo:</h3>
+ 							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div style="float: center;" align="center" >
+ 				 				<h4 id="desc"></h4>
+ 				 			</div>
+						</td>
+					</tr>
+				
+				</table>
+ 				 
+ 				 
+			</td>
+		</tr>
+	</table>
+	
+	
+	<h3 class="likert-header">Com relação a cor das fontes do texto, qual das cores apresentadas mais lhe agrada?</h3>
+	<form action="" wicket:id="form" id="form" method="post">
+		<wicket:container wicket:id="group">
+		
+				<ul class='likert'>
+				
+					<li><input type="radio" wicket:id="azul" name="likert" value="azul"  onClick="CB(this.id);"id="azul"><label>Fonte azul</label></li>
+					
+					<li><input type="radio" wicket:id="laranja" name="likert" value="laranja"onClick="CB(this.id);" id="laranja"><label>Fonte laranja</label></li>
+					
+					<li><input type="radio" wicket:id="preto" name="likert" value="preto" onClick="CB(this.id);" id="preto"> <label>Fonte preta</label></li>
+					
+					<li><input type="radio" wicket:id="verde" name="likert" value="verde" onClick="CB(this.id);" id="verde"><label>Fonte verde</label></li>
+					
+					<li><input type="radio" wicket:id="vermelho" name="likert" value="vermelho" onClick="CB(this.id);" id="vermelho"><label>Fonte vermelha</label></li>
+				
+				</ul> 		
+					
+		</wicket:container>
+		<CENTER>
+			<input  class="btn btn-primary" type="submit" name="Próximo" value="Próximo" />
+		</CENTER>
+		
+	</form>
+</body>
+</html>
+
+

@@ -1,0 +1,203 @@
+html,body {padding:0;margin:0;}
+.wrap {
+  font:12px Arial, san-serif;
+}
+h1.likert-header {
+  padding-left:4.25%;
+  margin:20px 0 0;
+}
+
+img {
+/* 	display: block */
+/*     position: absolute; */
+/*     margin: auto; */
+/*     margin-left: auto; */
+/*     margin-right: auto; */
+/*     margin: 0 auto; */
+}
+
+div
+{
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center";
+}
+
+form .statement {
+  display:block;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 30px 0 0 4.25%;
+  margin-bottom:10px;
+}
+form .likert {
+  list-style:none;
+  width:100%;
+  margin:0;
+  padding:0 0 20px;
+  display:block;
+  border-bottom:2px solid #efefef;
+}
+form .likert:last-of-type {border-bottom:0;}
+form .likert:before {
+  content: '';
+  position:relative;
+  top:11px;
+  left:9.5%;
+  display:block;
+  background-color:#efefef;
+  height:4px;
+  width:78%;
+}
+form .likert li {
+  display:inline-block;
+  width:19%;
+  text-align:center;
+  vertical-align: top;
+}
+form .likert li input[type=radio] {
+  display:block;
+  position:relative;
+  top:0;
+  left:50%;
+  margin-left:-6px;
+
+}
+form .likert li label {width:100%;}
+form .buttons {
+  margin:30px 0;
+  padding:0 4.25%;
+  text-align:right
+}
+form .buttons button {
+  padding: 5px 10px;
+  background-color: #67ab49;
+  border: 0;
+  border-radius: 3px;
+}
+form .buttons .clear {background-color: #e9e9e9;}
+form .buttons .submit {background-color: #67ab49;}
+form .buttons .clear:hover {background-color: #ccc;}
+form .buttons .submit:hover {background-color: #14892c;}
+
+/* Progress Tracker v2 */
+ol.progress[data-steps="2"] li { width: 49%; }
+ol.progress[data-steps="3"] li { width: 33%; }
+ol.progress[data-steps="4"] li { width: 24%; }
+ol.progress[data-steps="5"] li { width: 19%; }
+ol.progress[data-steps="6"] li { width: 16%; }
+ol.progress[data-steps="7"] li { width: 14%; }
+ol.progress[data-steps="8"] li { width: 12%; }
+ol.progress[data-steps="9"] li { width: 11%; }
+
+.progress {
+    width: 100%;
+    list-style: none;
+    list-style-image: none;
+    padding: 0;
+}
+
+.progress li {
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+.progress .name {
+    display: block;
+    vertical-align: bottom;
+    text-align: center;
+    margin-bottom: 1em;
+    color: black;
+    opacity: 0.3;
+}
+
+.progress .step {
+    color: black;
+    border: 3px solid silver;
+    background-color: green;
+    border-radius: 50%;
+    line-height: 1.2;
+    width: 1.2em;
+    height: 1.2em;
+    display: inline-block;
+    z-index: 0;
+}
+
+.progress .step span {
+    opacity: 0.3;
+}
+
+.progress .active .name,
+.progress .active .step span {
+    opacity: 1;
+}
+
+.progress .step:before {
+    content: "";
+    display: block;
+    background-color: silver;
+    height: 0.4em;
+    width: 50%;
+    position: absolute;
+    bottom: 0.6em;
+    left: 0;
+    z-index: -1;
+}
+
+.progress .step:after {
+    content: "";
+    display: block;
+    background-color: silver;
+    height: 0.4em;
+    width: 50%;
+    position: absolute;
+    bottom: 0.6em;
+    right: 0;
+    z-index: -1;
+}
+
+.progress li:first-of-type .step:before {
+    display: none;
+}
+
+.progress li:last-of-type .step:after {
+    display: none;
+}
+
+.progress .done .step,
+.progress .done .step:before,
+.progress .done .step:after,
+.progress .active .step,
+.progress .active .step:before {
+    background-color: yellowgreen;
+}
+
+.progress .done .step,
+.progress .active .step {
+    border: 3px solid yellowgreen;
+} 
+
+.tableStyle{
+	transition-property: background-color;
+	trasition-property: text;
+	transition-duration: 2s;
+}
+
+.shape {
+  height: 250px;
+  width: 300px;
+  background-color: #d3d7cf;
+  border-radius: 80px;
+  margin-bottom: 30px;
+  float: left;
+  margin-right: 20px;
+}
+
+.shape2 {
+  border-radius: 30px;
+}
+
+.shape3 {
+  border-radius: 5px;
+}

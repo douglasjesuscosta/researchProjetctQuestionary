@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+gaeDeployDialogSettings=
+gaeLaunchAppInBrowser=true
+googleCloudSqlEnabled=false
+localDevMySqlEnabled=false
+testDatabaseName=questionario
+testDatabasePassword=m748596
+testDatabaseUser=postgres
+testInstanceName=instanciaquestionario
+testIsConfigured=true

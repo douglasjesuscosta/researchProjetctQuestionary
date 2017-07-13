@@ -1,0 +1,93 @@
+<html>
+<head>
+</head>
+
+<body>
+	<!-- Progress Tracker v2 -->
+	<ol class="progress" data-steps="6">
+	    <li class="active">
+	        <span class="name">Pergunta 1</span>
+	        <span class="step"><span>1</span></span>
+	    </li>
+	    <li>
+	        <span class="name">Pergunta 2</span>
+	        <span class="step"><span>2</span></span>
+	    </li>
+	    <li>
+	        <span class="name">Pergunta 3</span>
+	        <span class="step"><span>3</span></span>
+	    </li>
+	    <li>
+	        <span class="name">Pergunta 4</span>
+	        <span class="step"><span>4</span></span>
+	    </li>
+	    <li>
+	        <span class="name">Pergunta 5</span>
+	        <span class="step"><span>5</span></span>
+	    </li>
+	    <li>
+	        <span class="name">Pergunta 6</span>
+	        <span class="step"><span>6</span></span>
+	    </li>
+	</ol>
+
+	<table>
+		<tr height="100%" >
+			<td class="col-md-3">
+				<img id="imagem" src="" width="750" height="450"/>
+				
+			</td>	
+			<td style="text-align:center;"  class="col-md-2" id="col-text">
+				<table id="table-text" class="tableStyle shape shape2" >
+					<tr>
+						<td>
+							<div style="float: top;" align="center" >
+ 				 				<h3 id="texto">Selecione uma das opções abaixo:</h3>
+ 							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div style="float: center;" align="center" >
+ 				 				<h4 id="desc"></h4>
+ 				 			</div>
+						</td>
+					</tr>
+				
+				</table>
+ 				 
+ 				 
+			</td>
+		</tr>
+	</table>
+	
+	
+	<h3 class="likert-header">Qual das cores predominantes na interface mais lhe agrada?</h3>
+	<form action="" wicket:id="form" id="form" method="post">
+		<wicket:container wicket:id="group">
+		
+				<ul class='likert'>
+				
+					<li><input type="radio" wicket:id="pred_branca" name="likert" value="pred_branca"  onClick="CB(this.id);"id="pred_branca"><label>Predominância branca</label></li>
+					
+					<li><input type="radio" wicket:id="pred_amarela" name="likert" value="pred_amarela"onClick="CB(this.id);" id="pred_amarela"> <label>Predominância amaprela</label></li>
+					
+					<li><input type="radio" wicket:id="pred_laranja" name="likert" value="pred-laranja" onClick="CB(this.id);" id="pred_laranja"> <label>Predominância laranja</label></li>
+					
+					<li><input type="radio" wicket:id="pred_verde" name="likert" value="pred_verde" onClick="CB(this.id);" id="pred_verde"><label>Predominância verde</label></li>
+					
+					<li><input type="radio" wicket:id="pred_azul" name="likert" value="pred_azul" onClick="CB(this.id);" id="pred_azul"><label>Predominância azul</label></li>
+				
+				</ul> 		
+					
+		</wicket:container>
+		
+		<CENTER>
+			<input class="btn btn-primary" type="submit" name="Próximo" value="Próximo" onclick="move()" />
+		</CENTER>
+		
+	</form>
+</body>
+</html>
+
+
