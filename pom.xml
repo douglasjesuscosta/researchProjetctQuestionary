@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-   Licensed to the Apache Software Foundation (ASF) under one or more
-   contributor license agreements.  See the NOTICE file distributed with
-   this work for additional information regarding copyright ownership.
-   The ASF licenses this file to You under the Apache License, Version 2.0
-   (the "License"); you may not use this file except in compliance with
-   the License.  You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
--->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor 
+	license agreements. See the NOTICE file distributed with this work for additional 
+	information regarding copyright ownership. The ASF licenses this file to 
+	You under the Apache License, Version 2.0 (the "License"); you may not use 
+	this file except in compliance with the License. You may obtain a copy of 
+	the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required 
+	by applicable law or agreed to in writing, software distributed under the 
+	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
+	OF ANY KIND, either express or implied. See the License for the specific 
+	language governing permissions and limitations under the License. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
@@ -24,15 +17,10 @@
 	<artifactId>questionario</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-		<!-- TODO project name  -->
+	<!-- TODO project name -->
 	<name>quickstart</name>
 	<description></description>
-	<!--
-		<organization>
-			<name>company name</name>
-			<url>company url</url>
-		</organization>
-	-->
+	<!-- <organization> <name>company name</name> <url>company url</url> </organization> -->
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -41,37 +29,33 @@
 		</license>
 	</licenses>
 	<properties>
-<!-- 		<wicket.version>7.5.0-SNAPSHOT</wicket.version> -->
+		<!-- <wicket.version>7.5.0-SNAPSHOT</wicket.version> -->
 		<jetty9.version>9.2.19.v20160908</jetty9.version>
 		<wicket.version>6.20.0</wicket.version>
-        <slf4j.version>1.6.4</slf4j.version>
+		<slf4j.version>1.6.4</slf4j.version>
 		<log4j.version>2.6.2</log4j.version>
 		<junit.version>4.12</junit.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- allowed values: R7, 1.0, 1.5, 2.0 or none -->
 		<wtp.version>none</wtp.version>
-		
+
 		<INSTANCE_CONNECTION_NAME>quationario:us-central1:instanciaquestionario</INSTANCE_CONNECTION_NAME>
-    	<user>postgres</user>
-    	<password>m748596</password>
-    	<database>questionario</database>
-		
-		
+		<user>postgres</user>
+		<password>m748596</password>
+		<database>questionario</database>
+
+
 	</properties>
 	<dependencies>
-		<!--  WICKET DEPENDENCIES -->
+		<!-- WICKET DEPENDENCIES -->
 		<dependency>
 			<groupId>org.apache.wicket</groupId>
 			<artifactId>wicket-core</artifactId>
 			<version>${wicket.version}</version>
 		</dependency>
-		<!-- OPTIONAL DEPENDENCY
-		<dependency>
-			<groupId>org.apache.wicket</groupId>
-			<artifactId>wicket-extensions</artifactId>
-			<version>${wicket.version}</version>
-		</dependency>
-		-->
+		<!-- OPTIONAL DEPENDENCY <dependency> <groupId>org.apache.wicket</groupId> 
+			<artifactId>wicket-extensions</artifactId> <version>${wicket.version}</version> 
+			</dependency> -->
 
 		<!-- LOGGING DEPENDENCIES - LOG4J -->
 		<dependency>
@@ -85,7 +69,7 @@
 			<version>${log4j.version}</version>
 		</dependency>
 
-		<!--  JUNIT DEPENDENCY FOR TESTING -->
+		<!-- JUNIT DEPENDENCY FOR TESTING -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -93,75 +77,75 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!--  JETTY DEPENDENCIES FOR TESTING  -->
+		<!-- JETTY DEPENDENCIES FOR TESTING -->
 		<dependency>
 			<groupId>org.eclipse.jetty.aggregate</groupId>
 			<artifactId>jetty-all</artifactId>
 			<version>${jetty9.version}</version>
 			<scope>test</scope>
 		</dependency>
-		
-		
-		<!--  WICKET BOOTSTRAP  -->
+
+
+		<!-- WICKET BOOTSTRAP -->
 		<dependency>
-    		<groupId>org.apache.wicket</groupId>
-    		<artifactId>wicket-bootstrap</artifactId>
-    		<version>0.9</version>
+			<groupId>org.apache.wicket</groupId>
+			<artifactId>wicket-bootstrap</artifactId>
+			<version>0.9</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/postgresql/postgresql -->
 		<dependency>
-    		<groupId>org.postgresql</groupId>
-    		<artifactId>postgresql</artifactId>
-    		<version>42.1.1</version>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.1.1</version>
 		</dependency>
-		
+
 		<dependency>
-    		<groupId>de.agilecoders.wicket</groupId>
-   			<artifactId>wicket-bootstrap-themes</artifactId>
-   			<version>0.9.9</version>
+			<groupId>de.agilecoders.wicket</groupId>
+			<artifactId>wicket-bootstrap-themes</artifactId>
+			<version>0.9.9</version>
 		</dependency>
-		
+
 		<dependency>
-   			<groupId>de.agilecoders.wicket</groupId>
-   			<artifactId>wicket-bootstrap-less</artifactId>
-    		<version>0.10.12</version>
+			<groupId>de.agilecoders.wicket</groupId>
+			<artifactId>wicket-bootstrap-less</artifactId>
+			<version>0.10.12</version>
 		</dependency>
-		
+
 		<dependency>
-   			<groupId>com.googlecode.wicket-jquery-ui</groupId>
-    		<artifactId>jquery-ui-core</artifactId>
-   		 	<version>6.2.2</version>
+			<groupId>com.googlecode.wicket-jquery-ui</groupId>
+			<artifactId>jquery-ui-core</artifactId>
+			<version>6.2.2</version>
 		</dependency>
-		
+
 		<dependency>
-    		<groupId>org.webjars</groupId>
-    		<artifactId>jquery</artifactId>
-    		<version>3.2.1</version>
+			<groupId>org.webjars</groupId>
+			<artifactId>jquery</artifactId>
+			<version>3.2.1</version>
 		</dependency>
-		
+
 		<dependency>
-    		<groupId>org.wicketstuff</groupId>
-    		<artifactId>wicketstuff-gae-initializer</artifactId>
-   			<version>${wicket.version}</version>
+			<groupId>org.wicketstuff</groupId>
+			<artifactId>wicketstuff-gae-initializer</artifactId>
+			<version>${wicket.version}</version>
 		</dependency>
-		
+
 		<dependency>
-    		<groupId>org.slf4j</groupId>
-   			<artifactId>slf4j-jdk14</artifactId>
-    		<version>${slf4j.version}</version>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-jdk14</artifactId>
+			<version>${slf4j.version}</version>
 		</dependency>
-		
+
 		<dependency>
-  			<groupId>com.google.cloud.sql</groupId>
-  			<artifactId>postgres-socket-factory</artifactId>
-  			<version>1.0.3</version>
+			<groupId>com.google.cloud.sql</groupId>
+			<artifactId>postgres-socket-factory</artifactId>
+			<version>1.0.3</version>
 		</dependency>
-		
+
 	</dependencies>
 	<build>
 		<directory>src/main/webapp/WEB-INF</directory>
- 	 	<outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
+		<outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
 		<resources>
 			<resource>
 				<filtering>false</filtering>
@@ -199,7 +183,7 @@
 				<inherited>true</inherited>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
+				<version>3.3</version>
 				<configuration>
 					<source>1.7</source>
 					<target>1.7</target>
@@ -231,11 +215,11 @@
 					<wtpversion>${wtp.version}</wtpversion>
 				</configuration>
 			</plugin>
-			 <plugin>
-    			<groupId>com.google.cloud.tools</groupId>
-     			<artifactId>appengine-maven-plugin</artifactId>
-     			<version>1.3.1</version>
-   			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>appengine-maven-plugin</artifactId>
+				<version>1.3.1</version>
+			</plugin>
 		</plugins>
 	</build>
 
@@ -251,4 +235,4 @@
 			</snapshots>
 		</repository>
 	</repositories>
-	</project>
+</project>
