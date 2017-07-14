@@ -18,9 +18,9 @@ public class ConnectionBd {
 	private static Connection connection;
 	
 	private ConnectionBd() throws SQLException, ClassNotFoundException{
-		Class.forName("org.postgresql.Driver");
-		connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/questionario","postgres","m748596");
-		
+	//Class.forName("org.postgresql.Driver");
+	//	connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/questionario","postgres","m748596");
+	
 //		Class.forName("org.postgresql.Driver");
 //		 String jdbcUrl = String.format(
 //			        "jdbc:postgresql://google/%s?questionarioinstancia=%s&"
@@ -29,7 +29,7 @@ public class ConnectionBd {
 //			        "questionaarioinstancia");
 //		  Connection connection = DriverManager.getConnection(jdbcUrl, "postgres", "m748596");
 		
-		//conectar();
+		connection = conectar();
 	}
 	
 	public static PreparedStatement getPreparedStatement(String sql){
