@@ -97,11 +97,11 @@ public class ConnectionBd {
 	                "&socketFactoryArg=%s",
 	            databaseName,
 	            instanceConnectionName);
-	    
+	    String url2 = "jdbc:google:postgres://${quationario:us-central1:instanciaquestionario}/${questionario}?user=${postgres}&amp;password=${m748596}";
 	    String url = "jdbc:postgresql://google/${questionario}?useSSL=false&amp;socketFactoryArg=${quationario:us-central1:instanciaquestionario}&amp;socketFactory=com.google.cloud.sql.postgres.SocketFactory&amp;user=${postgres}&amp;password=${m748596}";
 	 
 	    try {
-			conexao = DriverManager.getConnection(jdbcUrl, username, password);
+			conexao = DriverManager.getConnection(url2, username, password);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
