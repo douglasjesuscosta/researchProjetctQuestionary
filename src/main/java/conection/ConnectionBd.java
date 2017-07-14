@@ -93,10 +93,10 @@ public class ConnectionBd {
 
 	    //[START doc-example]
 	    String jdbcUrl = String.format(
-	        "jdbc:postgresql://google/%s?cloudSqlInstance=%s&"
-	            + "socketFactory=com.google.cloud.sql.postgres.SocketFactory",
-	        databaseName,
-	        instanceConnectionName);
+	            "jdbc:postgresql://google/%s?socketFactory=com.google.cloud.sql.postgres.SocketFactory" +
+	                "&socketFactoryArg=%s",
+	            databaseName,
+	            instanceConnectionName);
 	    
 	    String url = "jdbc:postgresql://google/${questionario}?useSSL=false&amp;socketFactoryArg=${quationario:us-central1:instanciaquestionario}&amp;socketFactory=com.google.cloud.sql.postgres.SocketFactory&amp;user=${postgres}&amp;password=${m748596}";
 	 
