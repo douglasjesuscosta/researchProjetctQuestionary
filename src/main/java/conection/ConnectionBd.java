@@ -19,7 +19,7 @@ public class ConnectionBd {
 	
 	private ConnectionBd() throws SQLException, ClassNotFoundException{
 		Class.forName("org.postgresql.Driver");
-		connection = DriverManager.getConnection("jdbc:postgresql://35.184.236.1:5432/questionario","postgres","m748596");
+		connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/questionario","postgres","m748596");
 		
 //		Class.forName("org.postgresql.Driver");
 //		 String jdbcUrl = String.format(
