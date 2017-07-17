@@ -38,6 +38,12 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- allowed values: R7, 1.0, 1.5, 2.0 or none -->
 		<wtp.version>none</wtp.version>
+		
+		<!-- INSTANCE_CONNECTION_NAME from Cloud Console > SQL > Instance Details > Properties
+		     or gcloud sql instances describe <instance>
+		     project:region:instance for Cloud SQL 2nd Generation or
+		     project:instance        for Cloud SQL 1st Generation
+		-->
 
 		<INSTANCE_CONNECTION_NAME>quationario:us-central1:instanciaquestionario2</INSTANCE_CONNECTION_NAME>
 		<user>root</user>
@@ -46,6 +52,7 @@
 
 
 	</properties>
+	
 	<dependencies>
 		<!-- WICKET DEPENDENCIES -->
 		<dependency>
