@@ -6,6 +6,7 @@
 	<!-- Allows App Engine to send multiple requests to one instance in parallel: -->
 	<threadsafe>true</threadsafe>
 	<sessions-enabled>true</sessions-enabled>
+	<use-google-connector-j>true</use-google-connector-j>
 
 	<!-- Configure java.util.logging -->
 	<system-properties>
