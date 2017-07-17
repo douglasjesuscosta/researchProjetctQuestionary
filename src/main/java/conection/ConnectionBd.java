@@ -29,7 +29,7 @@ public class ConnectionBd {
 //			        "questionaarioinstancia");
 //		  Connection connection = DriverManager.getConnection(jdbcUrl, "postgres", "m748596");
 		
-		connection = conectar();
+		conectarMysql();
 	}
 	
 	public static PreparedStatement getPreparedStatement(String sql){
@@ -63,7 +63,21 @@ public class ConnectionBd {
 	}
 	
 	  
-	public Connection conectar(){
+	public void conectarMysql(){
+		String url = System.getProperty("ae-cloudsql.cloudsql-database-url");
+	    
+	    // Load the class that provides the new "jdbc:google:mysql://" prefix.
+	    try {
+	    	Class.forName("com.mysql.jdbc.GoogleDriver");
+			connection = DriverManager.getConnection(url);
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	      
+	}
+	
+	public Connection conectarPostgres(){
 		// TODO: fill this in
 	    // The instance connection name can be obtained from the instance overview page in Cloud Console
 	    // or by running "gcloud sql instances describe <instance> | grep connectionName".
