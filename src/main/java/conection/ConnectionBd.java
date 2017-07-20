@@ -64,13 +64,34 @@ public class ConnectionBd {
 	
 	  
 	public void conectarMysql(){
+		
+		
+		
 		String url = System.getProperty("ae-cloudsql.cloudsql-database-url");
 	    
+		if (System
+		        .getProperty("com.google.appengine.runtime.version").startsWith("Google App Engine/")) {
+		      // Check the System properties to determine if we are running on appengine or not
+		      // Google App Engine sets a few system properties that will reliably be present on a remote
+		      // instance.
+		      url = System.getProperty("cloudsql");
+		      try {
+		    	System.out.println("APPENGINE");
+		        // Load the class that provides the new "jdbc:google:mysql://" prefix.
+		        Class.forName("com.mysql.jdbc.GoogleDriver");
+		      } catch (ClassNotFoundException e) {
+		    	  e.printStackTrace();
+		      }
+		    } else {
+		      System.out.println("LOCAL");
+		      url = System.getProperty("cloudsql-local");
+		    }
+		
 	    // Load the class that provides the new "jdbc:google:mysql://" prefix.
 	    try {
-	    	Class.forName("com.mysql.jdbc.GoogleDriver");
+	    	//Class.forName("com.mysql.jdbc.GoogleDriver");
 			connection = DriverManager.getConnection(url);
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

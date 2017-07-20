@@ -38,14 +38,21 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- allowed values: R7, 1.0, 1.5, 2.0 or none -->
 		<wtp.version>none</wtp.version>
+		
+		<!-- INSTANCE_CONNECTION_NAME from Cloud Console > SQL > Instance Details > Properties
+		     or gcloud sql instances describe <instance>
+		     project:region:instance for Cloud SQL 2nd Generation or
+		     project:instance        for Cloud SQL 1st Generation
+		-->
 
-		<INSTANCE_CONNECTION_NAME>quationario:us-central1:instanciaquestionario</INSTANCE_CONNECTION_NAME>
-		<user>postgres</user>
+		<INSTANCE_CONNECTION_NAME>quationario:us-central1:instanciaquestionario2</INSTANCE_CONNECTION_NAME>
+		<user>root</user>
 		<password>m748596</password>
 		<database>questionario</database>
 
 
 	</properties>
+	
 	<dependencies>
 		<!-- WICKET DEPENDENCIES -->
 		<dependency>
@@ -135,11 +142,16 @@
 			<artifactId>slf4j-jdk14</artifactId>
 			<version>${slf4j.version}</version>
 		</dependency>
-
+		
+		<dependency> <!-- ONLY USED LOCALY -->
+ 			<groupId>mysql</groupId>
+  			<artifactId>mysql-connector-java</artifactId>
+  			<version>5.1.40</version>  <!-- v5.x.x is for production, v6.x.x EAP X DevAPI -->
+		</dependency>
 		<dependency>
-			<groupId>com.google.cloud.sql</groupId>
-			<artifactId>postgres-socket-factory</artifactId>
-			<version>1.0.3</version>
+  			<groupId>com.google.cloud.sql</groupId>
+  			<artifactId>mysql-socket-factory</artifactId>
+  			<version>1.0.2</version>
 		</dependency>
 
 	</dependencies>
