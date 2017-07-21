@@ -29,6 +29,8 @@ public class ConnectionBd {
 //			        "questionaarioinstancia");
 //		  Connection connection = DriverManager.getConnection(jdbcUrl, "postgres", "m748596");
 		
+		
+		
 		conectarMysql();
 	}
 	
