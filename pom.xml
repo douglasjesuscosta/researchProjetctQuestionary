@@ -49,7 +49,9 @@
 		<user>root</user>
 		<password>m748596</password>
 		<database>questionario</database>
-
+		
+		<maven.compiler.target>1.8</maven.compiler.target>
+   		<maven.compiler.source>1.8</maven.compiler.source>
 
 	</properties>
 	
@@ -142,17 +144,18 @@
 			<artifactId>slf4j-jdk14</artifactId>
 			<version>${slf4j.version}</version>
 		</dependency>
-		
-		<dependency> <!-- ONLY USED LOCALY -->
- 			<groupId>mysql</groupId>
-  			<artifactId>mysql-connector-java</artifactId>
-  			<version>5.1.40</version>  <!-- v5.x.x is for production, v6.x.x EAP X DevAPI -->
+
+		<dependency> <!-- Only used locally -->
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.42</version>  <!-- v5.x.x is for production, v6.x.x EAP X DevAPI -->
 		</dependency>
 		<dependency>
-  			<groupId>com.google.cloud.sql</groupId>
-  			<artifactId>mysql-socket-factory</artifactId>
-  			<version>1.0.2</version>
+			<groupId>com.google.cloud.sql</groupId>
+			<artifactId>mysql-socket-factory</artifactId> <!-- mysql-socket-factory-connector-j-6 if using 6.x.x -->
+			<version>1.0.3</version>
 		</dependency>
+		
 
 	</dependencies>
 	<build>

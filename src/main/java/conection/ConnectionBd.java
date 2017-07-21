@@ -72,22 +72,20 @@ public class ConnectionBd {
 		String url = System.getProperty("ae-cloudsql.cloudsql-database-url");
 	    
 		if (System
-		        .getProperty("com.google.appengine.runtime.version").startsWith("Google App Engine/")) {
+			  .getProperty("com.google.appengine.runtime.version").startsWith("Google App Engine/")) {
 		      // Check the System properties to determine if we are running on appengine or not
 		      // Google App Engine sets a few system properties that will reliably be present on a remote
 		      // instance.
 		      url = System.getProperty("cloudsql");
-		      try {
-		    	System.out.println("APPENGINE");
-		        // Load the class that provides the new "jdbc:google:mysql://" prefix.
-		        Class.forName("com.mysql.jdbc.GoogleDriver");
-		      } catch (ClassNotFoundException e) {
-		    	  e.printStackTrace();
-		      }
-		    } else {
+		      System.out.println("APPENGINE");
+			  // Load the class that provides the new "jdbc:google:mysql://" prefix.
+			  //Class.forName("com.mysql.jdbc.GoogleDriver");
+		} else {
 		      System.out.println("LOCAL");
-		      url = System.getProperty("cloudsql-local");
-		    }
+		      //Class.forName("com.mysql.jdbc.Driver");
+			 url = System.getProperty("cloudsql-local");
+		     
+		}
 		
 	    // Load the class that provides the new "jdbc:google:mysql://" prefix.
 	    try {

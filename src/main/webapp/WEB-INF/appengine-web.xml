@@ -25,6 +25,8 @@
 <!--     <property name="cloudsql" value="jdbc:google:mysql://quantionario:UTC-3:questionario2/questionario?user=root&password=m748596;" /> -->
 <!--     <property name="cloudsql-local" value="jdbc:mysql://google/${questionario}?cloudSqlInstance=${quationario:us-central1:instanciaquestionario2}&amp;socketFactory=com.google.cloud.sql.mysql.SocketFactory&amp;user=${root}&amp;password=${m748596}&amp;useSSL=false" /> -->
     
+    
+    
     <property name="cloudsql" value="jdbc:google:mysql://${quationario:us-central1:instanciaquestionario2}/${questionario}?user=${root}&amp;password=${m748596}" />
     <property name="cloudsql-local" value="jdbc:mysql://google/${questionario}?cloudSqlInstance=${quationario:us-central1:instanciaquestionario2}&amp;socketFactory=com.google.cloud.sql.mysql.SocketFactory&amp;user=${questionario}&amp;password=${m748596}&amp;useSSL=false" />
     
