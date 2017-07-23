@@ -16,7 +16,6 @@
   <threadsafe>true</threadsafe>
   <use-google-connector-j>true</use-google-connector-j>
   <sessions-enabled>true</sessions-enabled> 
-
   <service>cloudsql</service>
 
   <system-properties>
